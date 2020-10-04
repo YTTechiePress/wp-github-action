@@ -17,4 +17,5 @@
   _e( 'hello is the right word.', 'wp-github-action' );
   _e( 'Language is complex', 'wp-github-action' );
   _e( 'The complex Language is complex' );
+  _e( 'Do not forget about me' );
  }
