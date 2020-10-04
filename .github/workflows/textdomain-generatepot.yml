@@ -16,7 +16,6 @@ jobs:
         domain: 'wp-github-action'
       env:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-
   job2:
     runs-on: ubuntu-latest
     steps:
