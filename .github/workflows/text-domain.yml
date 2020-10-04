@@ -3,16 +3,28 @@ name: Add Missing text-domain
 on:
   push:
     branches:
-      - dev
+      - dev2
 
 jobs:
-  WP_Text_Domain:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: WordPress Textdomain
-      uses: varunsridharan/action-wp-textdomain@1.1
-      with:
-        domain: 'wp-github-action'
-      env:
-        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+  job1:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: WordPress Textdomain
+        uses: varunsridharan/action-wp-textdomain@1.1
+        with:
+          domain: 'wp-github-action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+
+  job2:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: WordPress POT Generator
+        uses: varunsridharan/action-wp-pot-generator@1.1
+        with:
+          save_path: './languages'
+          item_slug: 'wp-github-action'
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
