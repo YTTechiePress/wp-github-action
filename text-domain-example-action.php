@@ -15,4 +15,5 @@
  
  function text_domain_example() {
   _e( 'hello is the right word.', 'wp-github-action' );
+  _e( 'The right word.', 'swewp-github-action' );
  }
