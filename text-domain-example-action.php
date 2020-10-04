@@ -14,5 +14,5 @@
  add_action( 'the_title', 'text_domain_example' );
  
  function text_domain_example() {
-  _e( 'hello is the right word.' );
+  _e( 'hello is the right word.', 'wp-github-action' );
  }
