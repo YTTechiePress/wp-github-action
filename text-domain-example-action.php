@@ -16,4 +16,5 @@
  function text_domain_example() {
   _e( 'hello is the right word.', 'wp-github-action' );
   _e( 'Language is complex', 'wp-github-action' );
+  _e( 'The complex Language is complex' );
  }
